@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Karla:ital,wght@0,200..800;1,200..800&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Young+Serif&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+:root{
+  --Lime: hsl(61, 70%, 52%);
+  --Red: hsl(4, 69%, 50%);
+  --White: hsl(0, 0%, 100%);
+  --Slate100: hsl(202, 86%, 94%);
+  --Slate300: hsl(203, 41%, 72%);
+  --Slate500: hsl(200, 26%, 54%);
+  --Slate700: hsl(200, 24%, 40%);
+  --Slate900: hsl(202, 55%, 16%);
+}
+body{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Slate100);
+}
+input{
+  border: 1px solid black;
+}
+.mainbox{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  border: none;
+  background-color: var(--White);
+  width: 70%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 25px;
+}
+.leftbox{
+  padding: 25px;
+  .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    button{
+      font-size: 0.88em;
+      padding: 3px 5px;
+      width: 20%;
+    }
+  }
+
+  .firstinput input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px
+  }
+  .secondinput input, .thirdinput input{
+    width: 50%;
+    margin-bottom: 15px;
+  }
+  .sameinput{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    label{
+      font-size: 0.9rem;
+    }
+    .secondinput input ,.thirdinput input{
+      margin-top: 10px;
+      width: 100%;
+      padding: 10px;
+    }
+  }
+ .radioinput input[type="radio"] {
+  margin-right: 8px;
+}
+
+  .radioinput label{
+    display: block;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  button{
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    width: 100%;
+    border: none;
+    height: 50px;
+    border-radius: 15px;
+    background-color: var(--Lime);
+    cursor: pointer;
+  }
+}
+.rightbox{
+  padding: 25px;
+  color: var(--Slate300);
+  border-bottom-left-radius: 70px;
+  background-color: var(--Slate900);
+  h3{
+    margin-bottom: 8px;
+  }
+  .outputcontainer{
+    box-shadow: 8px 8px 8px rgba(0,0,0,0.5);
+    padding: 10px;
+    border-top: var(--Lime) 5px solid;
+    color: var(--Slate300);
+    margin-top: 40px;
+    h5{
+      margin-top: 20px;
+    }
+    h1{
+      margin-top: 10px;
+      color: var(--Lime);
+    }
+  }
+}
+@media (max-width:1340px){
+  .container{
+    width: 90%;
+  }
+  .head{
+    h3{
+      font-size: 1.1rem;
+    }
+  }
+  .sameinput .secondinput ,.sameinput .thirdinput{
+      grid-column: span 2;
+      width: 100%;
+  }
+  .secondinput input ,.thirdinput input{
+      margin-top: 10px;
+      
+    }
+}
+/* ---------------------------------------media queries------------------------------------ */
+@media (max-width: 1040px){
+  .mainbox{
+    width: 100%;
+  }
+  .container{
+    width: 90%;
+  }
+}
+@media (max-width:840px){
+  body{
+    display: block;
+  }
+  .mainbox{
+    padding: 40px;
+  }
+  .container .leftbox, .container .rightbox{
+    grid-column: span 2;
+  }
+}
+@media (max-width: 500px){
+  body{
+    padding: 0;
+  }
+  .mainbox{
+    width: 100%;
+    padding: 10px;
+  }
+  .container{
+    width: 100%;
+    border-radius: 0;
+  }
+  .container .rightbox{
+    border-bottom-left-radius: 0;
+  }
+}
+@media (max-width:390px){
+  .mainbox{
+    padding: 0;
+  }
+}

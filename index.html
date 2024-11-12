@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+  </head>
+  <body>
+    <div class="mainbox">
+      <div class="container">
+        <div class="leftbox">
+          <div class="head">
+            <h3>MORTGAGE CALCULATOR</h3>
+            <button id="clear">Clear all</button>
+          </div>
+          <div class="firstinput">
+            <label for="mortgageamount">Mortgage Amount( $ )</label><br />
+            <input type="number" id="mortgageamount" required />
+          </div>
+          <div class="sameinput">
+            <div class="secondinput">
+              <label for="mortgageterm">Mortgage Term (Year) </label><br />
+              <input type="number" id="mortgageterm"  required/>
+            </div>
+            <div class="thirdinput">
+              <label for="interestrate ">Interest Rate ( % )</label><br />
+              <input type="number" id="interestrate" required />
+            </div>
+          </div>
+          <div class="radioinput">
+            <label for="repayment">
+              <input
+                type="radio"
+                name="payment"
+                id="repayment"
+                required
+              />Repayment </label
+            ><br />
+            <label for="interestonly">
+              <input type="radio" name="payment" id="interestonly" required />Interest
+              Only </label
+            ><br />
+          </div>
+          <button type="submit" id="mybutton">Calculate</button>
+        </div>
+        <div class="rightbox">
+          <h3>Your Result</h3>
+          <p>
+            Your results are shown below based on the information you
+            provided.To adjust the results,edit the form and click
+            <q>Calculate</q> again.
+          </p>
+          <div class="outputcontainer">
+            <h5>Your Monthly repayments:</h5>
+            <h1 id="resultoutput"></h1>
+            <h5>Total you'll repay over the term:</h5>
+            <h1 id="resultoutput1"></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
